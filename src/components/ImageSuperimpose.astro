@@ -1,7 +1,10 @@
 ---
 // import '../../public/assets/css/ImageSuperimpose.css'; // Import the CSS file for styling
 ---
-
+<script>
+  let audio = new Audio('./assets/lights.mp3');
+    audio.play();
+</script>
 <style>
   
  @font-face {
@@ -113,8 +116,7 @@
     element.innerHTML = glow;
     neonEffect(str, opacity + 0.005, delay / 20);
   }, delay);
-  let audio = new Audio('lights.mp3');
-    audio.play();
+  
 }
 
 
@@ -133,12 +135,15 @@
       neonEffect2(str, opacity + 0.005, delay / 20);
     }, delay);
   }
-  let audio = new Audio('/assets/lights.mp3');
-  audio.play();
+  
   // Example usage
   const name = 'Lorenzo Zanuso';
   const diagonal = 'Portfolio Edition';
   neonEffect(name, 0, 2500);
   neonEffect2(diagonal, 0, 3100);
   recursive();
+
+  setTimeout(function() {
+    window.location.href = "dashboard";
+  }, 6000);
 </script>
